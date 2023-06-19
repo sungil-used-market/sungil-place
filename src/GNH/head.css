@@ -23,7 +23,46 @@ header > div > h1 {
   right: 70px;
   top: 15px;
 }
-.menu-toggle {
+
+.toggle {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.toggle span {
+  display: block;
+  background: white;
+  width: 42px;
+  height: 4px;
+  border-radius: 3px;
+  transition: 0.25s margin 0.25s, 0.25s transform;
+}
+.toggle span:nth-child(1) {
+  margin-bottom: 8px;
+}
+.toggle span:nth-child(3) {
+  margin-top: 8px;
+}
+.toggle.active span {
+  transition: 0.25s margin, 0.25s transform 0.25s;
+}
+.toggle.active span:nth-child(1) {
+  margin-top: 8px;
+  margin-bottom: -4px;
+  transform: rotate(45deg);
+}
+.toggle.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.toggle.active span:nth-child(3) {
+  margin-top: -4px;
+  transform: rotate(135deg);
+}
+
+/* .menu-toggle {
   width: 60px;
   height: 5px;
   margin-top: 15px;
@@ -33,4 +72,47 @@ header > div > h1 {
 #Nav-Button {
   background-color: rgba(255, 255, 255, 0);
   border: none;
+} */
+
+/* .menu-bar {
+  background-color: aquamarine;
+} */
+.menu-bar > ul {
+  /* display: none; */
+  position: absolute;
+  background-color: rgb(19, 35, 51);
+  width: 14vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+.menu-bar > ul > #test {
+  margin-top: 11vh;
+}
+.menu-bar > ul > li {
+  list-style: none;
+  text-align: center;
+  /* margin-top: 10vh; */
+}
+.menu-bar > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+/* .menu-bar > ul > li:hover {
+  background-color: white;
+  color: black;
+  
+} */
+.menu-bar > ul > li:hover {
+  background-color: white;
+  color: black;
+}
+.opacity {
+  /* display: none; */
+  position: absolute;
+  background-color: black;
+  top: 0;
+  opacity: 0.7;
+  width: 100%;
+  height: 100vh;
 }
